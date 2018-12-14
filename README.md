@@ -14,3 +14,10 @@ Search from new email leads in email, ie for a given keyword get the the list of
 6. `pip install -r requirements.txt`
 7. Change the `query_string` varibale in `fetch_from_mail_and_pushto_spreadsheet.py` as per your need and run `python3 fetch_from_mail_and_pushto_spreadsheet.py`
 
+
+### Support:
+
+If you want the good work to continue please support us on
+
+* [PAYPAL](https://www.paypal.me/ishandutta2007)
+* [BITCOIN ADDRESS: 3LZazKXG18Hxa3LLNAeKYZNtLzCxpv1LyD](https://www.coinbase.com/join/5a8e4a045b02c403bc3a9c0c)
