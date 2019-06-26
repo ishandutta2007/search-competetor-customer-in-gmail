@@ -1,9 +1,9 @@
 import httplib2
 import os
 import oauth2client
-from oauth2client import client, tools
+from oauth2client import client, tools, file
 import base64
-from apiclient import errors, discovery
+from googleapiclient import errors, discovery
 import csv
 import codecs
 import random
@@ -28,7 +28,7 @@ query_term = "\"SDE 4\""
 def get_service_account_credentials():
     scope = ['https://spreadsheets.google.com/feeds',
             'https://www.googleapis.com/auth/drive']
-    credentials = ServiceAccountCredentials.from_json_keyfile_name('bigbullscollab-55669a1c65c2.json', scope)
+    credentials = ServiceAccountCredentials.from_json_keyfile_name(constants.PROJECT_JSON, scope)
     return credentials
 
 def get_oath_credentials():
@@ -37,7 +37,7 @@ def get_oath_credentials():
     if not os.path.exists(credential_dir):
         os.makedirs(credential_dir)
     credential_path = os.path.join(credential_dir, constants.CREDENTIAL_FILE_NAME)
-    store = oauth2client.file.Storage(credential_path)
+    store = file.Storage(credential_path)
     credentials = store.get()
     if not credentials or credentials.invalid:
         flow = client.flow_from_clientsecrets(constants.CLIENT_SECRET_FILE, constants.SCOPES)
@@ -121,7 +121,7 @@ def main():
     service = discovery.build('gmail', 'v1', http=http)
     messages = list_messages_matching_query(service, "me", query=query_term)
     totcust, totcomp = 0, 0
-    for message in messages[]:
+    for message in messages:
         print("\n" + message['id'] + ":\n")
         msg = get_message(service, "me", message['id'])
         headers = msg['payload']['headers']
