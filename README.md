@@ -8,7 +8,7 @@ Search from new email leads in email, ie for a given keyword get the the list of
 
 1. Create OAuth credentials and download credentials file as json (https://developers.google.com/gmail/api/quickstart/python)
 2. Create Service Account Credentials and download credentials file as json
-3. Create a google spread sheet named "competetor-customer-fetch-from-email" and share it with `projectname@serviceaccountname.iam.gserviceaccount.com`
+3. Create a google spread sheet named "competetor-customer-fetch-from-email" and share it with `serviceaccountname@projectid.iam.gserviceaccount.com`
 4. Move the downloaded OAuth's `client_secret.json` file(ie `client_secret_ishandutta2007.json` in my case) to the project root directory.
 5. Move the downloaded Service account credentials' json file(ie `bigbullscollab-55669a1c65c2.json` in my case) to the project root directory.
 6. `pip install -r requirements.txt`
