@@ -17,7 +17,7 @@ google-api-python-client-uritemplate == 1.4.2
 gspread == 3.1.0
 
 # fetch_from_mail_and_pushto_spreadsheet.py: 1
-httplib2 == 0.13.0
+httplib2 == 0.18.0
 
 # fetch_from_mail_and_pushto_spreadsheet.py: 4,24
 oauth2client == 4.1.3
